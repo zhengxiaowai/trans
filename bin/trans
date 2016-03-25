@@ -1,4 +1,4 @@
-#!/bin/usr/env node 
+#!/usr/bin/env node 
 var run = require('..')
 var args = process.argv.splice(2);
 
