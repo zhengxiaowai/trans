@@ -37,16 +37,17 @@ function readConfig (configPath) {
     return JSON.parse(fs.readFileSync(configPath, 'utf8'));
 }
 
+module.exports = function run(args) {
+    _.each(args, function(item, index) {
+        var extname = path.extname(item);
+        var randomId = shortid.generate();
+        var newFileName = randomId + extname;
 
-var args = process.argv.splice(2);
-_.each(args, function(item, index) {
-    var extname = path.extname(item);
-    var randomId = shortid.generate();
-    var newFileName = randomId + extname;
+        token = uptoken(bucket, newFileName);
+        uploadFile(token, newFileName, item);
+    });
+}
 
-    token = uptoken(bucket, newFileName);
-    uploadFile(token, newFileName, item);
-});
 
 
 
