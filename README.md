@@ -23,8 +23,6 @@ touch ~/.transrc
 }
 ```
 
-## Usage
-
 ```shell
 trans-js xxxx.png
 ```
