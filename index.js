@@ -3,7 +3,7 @@ var shortid = require('shortid');
 var _ = require('underscore');
 var path = require('path');
 var fs = require('fs');
-
+var urljoin = require('url-join');
 
 var configPath = path.join(process.env.HOME, '.transrc');
 var config = readConfig(configPath);
@@ -25,7 +25,7 @@ function uploadFile(uptoken, key, localFile) {
   var extra = new qiniu.io.PutExtra();
     qiniu.io.putFile(uptoken, key, localFile, extra, function(err, ret) {
       if(!err) {
-        process.stdout.write(domain + ret.key + '\n');
+        process.stdout.write(urljoin(domain,ret.key) + '\n');
       } else {
         process.stderr.write(err);
       }

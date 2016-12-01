@@ -4,7 +4,7 @@
 
 ## Installation
 
-```npm install trans-js```
+```npm install trans-js -g```
 
 ## Usage
 
@@ -18,10 +18,17 @@ touch ~/.transrc
 {
     "ACCESS_KEY": "你的 ACCESS_KEY",
     "SECRET_KEY": "你的 SECRET_KEY",
-    "domain": "七牛的公开域名",
+    "domain": "http://七牛的公开域名",
     "bucket": "你放置的产库，必须先创建"
 }
 ```
+
+## Usage
+
+```shell
+trans-js xxxx.png
+```
+
 
 ## LICENSE
 

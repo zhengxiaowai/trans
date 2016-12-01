@@ -1,8 +1,16 @@
 {
   "name": "trans-js",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "thranfer file to qiniu bucket",
   "main": "index.js",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/zhengxiaowai/trans.git"
+  },
+  "bugs": {
+	  "url": "https://github.com/zhengxiaowai/trans/issues"
+  },
+  "homepage": "https://github.com/zhengxiaowai/trans#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +20,7 @@
   "dependencies": {
     "qiniu": "^6.1.9",
     "shortid": "^2.2.4",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "url-join": "^1.1.0"
   }
 }
